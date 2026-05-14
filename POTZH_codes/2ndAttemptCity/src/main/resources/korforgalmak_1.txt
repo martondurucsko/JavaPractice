@@ -1,0 +1,9 @@
+4 5 3
+2 0 Vasut-utca 3
+0 1 Kossuth-utca 3
+3 1 Elso-utca 3
+2 3 Deak-utca 5
+1 2 Masodik-utca 2
+4 Vasut-utca Kossuth-utca Masodik-utca Deak-utca
+3 Elso-utca Masodik-utca Deak-utca
+2 Kossuth-utca Vasut-utca
