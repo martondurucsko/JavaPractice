@@ -76,12 +76,12 @@ public class AirPortLoader {
                 }
                 // ciklus utan adjuk hozza
                 Plane plane = new Plane(planename, route);
-                planes.add(plane);
+                planes.add(plane); // emiatt kell a 23. sor
 
 
             }
 
-            return new Airport(csomoPontById, guruloUtByName, planes);
+            return new Airport(csomoPontById, guruloUtByName, planes); //nagyon fontos beloadolni az airportot
 
         } catch (Exception e) {
             System.out.println("BEOLVASAS FAIL" + e);
