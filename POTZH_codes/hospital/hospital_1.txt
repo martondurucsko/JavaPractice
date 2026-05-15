@@ -1,0 +1,14 @@
+4 5 4
+1 CT
+2 LAB
+3 XRAY
+4 MRI
+bloodtest 2 700
+xray 3 1000
+ctscan 1 1200
+mri 4 1500
+ultrasound 2 900
+P1 3 bloodtest xray ctscan
+P2 2 mri bloodtest
+P3 2 xray ctscan
+P4 3 ultrasound mri bloodtest
