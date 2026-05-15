@@ -8,12 +8,13 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Hospital {
-    List<Thread> patientThreads = new ArrayList<>();
     List <Patient> patients = new ArrayList<>();
     List <Room> rooms = new ArrayList<>();
     Map <Integer , Room> roomsById = new HashMap<>();
-    private final List <String> logs = new ArrayList<>();
     Map <String,Vizsgálat> vizsgalatByName = new HashMap<>();
+
+    List<Thread> patientThreads = new ArrayList<>();
+    private final List <String> logs = new ArrayList<>();
 
     public Hospital(List<Patient> patients, List<Room> rooms,Map<Integer, Room> roomsById,Map <String,Vizsgálat> vizsgalatByName) {
         this.roomsById = roomsById;
@@ -21,6 +22,7 @@ public class Hospital {
         this.patients = patients;
         this.vizsgalatByName = vizsgalatByName;
 
+        /// A LEGFONTOSABB - összekötés
         for (Patient patient:patients){
             patient.setHospital(this);
         }
@@ -35,7 +37,7 @@ public class Hospital {
 
     public void startHospital(){
 
-        //nem inditja el az összes patientet
+        //bejarja a listat és minden eleméből patient threadet csinal
         for (Patient patient:patients) {
             Thread patientThread = new Thread(patient);
             patientThreads.add(patientThread);

@@ -76,20 +76,17 @@ public class HospitalLoader {
                 String patientId = patientParts[0];
                 int patientRouteLenght = Integer.parseInt(patientParts[1]);
 
-                List<Vizsgálat> route = new ArrayList<>();
+                List<Vizsgálat> route = new ArrayList<>(); ///belso forban hasznaljuk csak
                 for (int j = 0; j < patientRouteLenght; j++) {
                     String actVizsgalatName = patientParts[j+2]; //ez egy string
                     Vizsgálat actVizsgalat = vizsgalatByName.get(actVizsgalatName); // ez egy vizsgalat
 
                     route.add(actVizsgalat);
                 }
+                /// külső forban
                 Patient patient = new Patient(patientId,route);
-
                 patients.add(patient);
-
             }
-
-
 
             return new Hospital(patients, rooms, roomsById,vizsgalatByName);
         } catch (Exception e) {
