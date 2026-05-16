@@ -1,0 +1,5 @@
+4 3
+V1 3 burger 1000 pizza 1500 cola 300
+V2 2 leves 800 steak 2000
+V3 4 pasta 1200 salata 700 tiramisu 900 kave 400
+V4 2 gyros 1100 limonade 500
